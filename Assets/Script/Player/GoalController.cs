@@ -24,16 +24,17 @@ public class GoalController : MonoBehaviour
 
     void Alive()
     {
+        GetComponent<Renderer>().material.color = Color.white;
         Vector3 scale = transform.localScale;
-        scale.y = 0;
+        scale.y = 0.1f;
         transform.localScale = scale;
     }
 
     void notAlive()
     {
-        GetComponent<Renderer>().material.color = Color.red;
+        GetComponent<Renderer>().material.color = Color.white;
         Vector3 scale = transform.localScale;
-        scale.y = 1;
+        scale.y = 1.5f;
         transform.localScale = scale;
     }
 
